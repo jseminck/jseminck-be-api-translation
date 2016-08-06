@@ -27,7 +27,7 @@ deploy:
   provider: heroku
   api_key:
     secure: X+PxepeusF9ls2vaBftfV6X9d4pyHZXqnInJ15e8jhN4iv6WXGrTDlxSudrkTsWdQVJ8vGZeGpPD4y0/U1Rk5mXk0DBhlbHyzQd1SyHG8AZ67w6uxciH1z1XJPIJ/trz8eo8j5ahZQAexCIEaVIqIzsXgCoofSHsPmn2HentdHM54ZTeISL+RmjlKDENWLePiuV8JV0AVcc+aE83xlX9G5Ufq+JK3yAVhwN49Dim1TYTPYKN8yUcQ5MqCqDLjUpwOzFD9fs8S0QMgR5/Aql2S0v4Wu+645teKpsPf88bmPWw+j3WmQq2Lmh0adT+sAtLXN3Q0uxZkNsMxdDGDrytSDcGA1rn0bW13BZIFizFklztmogSOUr+D0OfH75QbOhLuGNEcZ2+mexB3nlmewdpMDtKA9ziUA5iq/EtHdo8Gwu82Va3anriLNH19M3jIkzYRVw2mMTElwezCqf3ibggPAv56e3YH4+f8ms/Nj9cnytVmm2lcYspiVVuhqeUL3OfkwtAzD7VSiBBNKcDWVYwspth4YtBvowTgE30xh7k5VGTp6SB1xsSHmANqZHPf/3irv+QyX0tpJWfCwEgJ+5YXTD8pDjpBcMJfBIwfl1CbQwqrqkbB2eN8jwfgXgx1I4zccn+kOBZCyY3wYQw9pAmr5Urjc+GHWbtpPsL1Ze/1HU=
-  app: jseminck-be-api-translation
+  app: blooming-plateau-71676
   on:
     repo: jseminck/jseminck-be-api-translation
   skip_cleanup: true
