@@ -4,7 +4,7 @@ import * as Translation from './../../lib/models/Translation';
 
 const app = require('./../../lib/index');
 
-describe('Integration tests for /api/expenses', () => {
+describe('Integration tests for /api/translation', () => {
     function createTranslation(english, translation, language, category) {
         return {
             english,
