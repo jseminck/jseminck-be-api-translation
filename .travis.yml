@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+- '5'
+env:
+- NODE_ENV=TEST CXX=g++-4.8
+services:
+- postgresql
+addons:
+  postgresql: '9.4'
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+before_script:
+- psql -c 'create database expenses;' -U postgres
+- sleep 15
+install:
+- travis_retry npm install -g node-gyp
+- travis_retry npm install
+- sleep 15
+script:
+- travis_retry npm run build
+- travis_retry npm run lint
+- travis_retry npm test
