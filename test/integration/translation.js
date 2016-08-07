@@ -46,6 +46,15 @@ describe('Integration tests for /api/translation', () => {
                 .end(done);
         });
 
+        it("returns 1 items for Spanish using limit parameter", function(done) {
+            supertest(app)
+                .get(`/api/translation?language=Spanish&limit=1`)
+                .expect((res) => {
+                    expect(res.body.length).to.equal(1);
+                })
+                .end(done);
+        });
+
         it("returns 3 items for Russian", function(done) {
             supertest(app)
                 .get(`/api/translation?language=Spanish`)
