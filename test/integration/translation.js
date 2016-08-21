@@ -69,7 +69,7 @@ describe('Integration tests for /api/translation', () => {
                 .get(`/api/translation?language=Spanish`)
                 .expect((res) => {
                     expect(res.body[0]).to.have.all.keys(
-                        'id', 'english', 'translation', 'language', 'category', 'correctguesses', 'totalguesses', 'created_at'
+                        'id', 'english', 'translation', 'language', 'category', 'correctguesses', 'totalguesses', 'created_at', 'difficulty'
                     );
 
                 })
