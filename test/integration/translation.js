@@ -76,7 +76,6 @@ describe('Integration tests for /api/translation', () => {
                 .end(done);
         });
 
-
         it("allows POST and has 4 items for Spanish", function(done) {
             const translation = {
                 english: "new",
@@ -94,6 +93,26 @@ describe('Integration tests for /api/translation', () => {
                 (cb) => supertest(app)
                         .get(`/api/translation?language=Spanish`).expect((res) => {
                             expect(res.body.length).to.equal(4);
+                        }).end(cb)
+            ], done);
+        });
+
+        it("allows POST for updating of difficulty", function(done) {
+            const updateDifficulty = {
+                id: 1,
+                difficulty: 4
+            };
+
+            async.series([
+                (cb) => supertest(app)
+                    .post('/api/translation/updateDifficulty')
+                    .send(updateDifficulty)
+                    .expect(200)
+                    .end(cb),
+                (cb) => supertest(app)
+                        .get(`/api/translation?language=Spanish`).expect((res) => {
+                            const filteredTranslations = res.body.filter(item => item.id === 1);
+                            expect(filteredTranslations[0].difficulty).to.equal(4);
                         }).end(cb)
             ], done);
         });
