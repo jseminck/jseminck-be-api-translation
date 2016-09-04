@@ -30,8 +30,8 @@ after_success:
 - rm -rf src/
 - rm -rf node_modules/
 - tar -czf jseminck-be-api-translation.tgz .
-- scp jseminck-be-api-translation.tgz deploy@95.85.25.10:/home/apps/
-- ssh deploy@95.85.25.10 'source ~/.bash_profile && cd /home/apps/ && ./deploy.sh jseminck-be-api-translation'
+- scp -P 2222 jseminck-be-api-translation.tgz deploy@95.85.25.10:/home/apps/
+- ssh -p 2222 deploy@95.85.25.10 'source ~/.bash_profile && cd /home/apps/ && ./deploy.sh jseminck-be-api-translation'
 before_install:
 - openssl aes-256-cbc -K $encrypted_fbdea3fe328e_key -iv $encrypted_fbdea3fe328e_iv
   -in deploy-key.enc -out deploy-key -d
